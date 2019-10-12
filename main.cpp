@@ -19,7 +19,7 @@ int main() {
 
 	double result = cclt.doIt(exp);
 
-		if (result < 0.00001)
+		if (result < 0.00001 && result > -0.00001)
 
 			cout << exp << 0 << endl;
 
