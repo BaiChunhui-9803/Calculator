@@ -1,10 +1,13 @@
 // Calculator based on stack
-
 #include "Stack.h"
 #include <iostream>
 #include <string>
 #include <vector>
 #include <math.h>
+
+#define MAX_RESULT_MEMORY 20
+#define MAX_EXP_MEMORY 20
+
 using namespace std;
 
 class Calculator {
@@ -62,6 +65,16 @@ private:
 	}
 
 public:
+
+	struct MEMORY {
+
+		double RMemory[MAX_RESULT_MEMORY];
+
+		string EMemory[MAX_EXP_MEMORY];
+
+		int DMemory = 0;
+
+	}MEM;
 
 	// 无参构造函数
 	Calculator() { m_opr.push('#'); }
